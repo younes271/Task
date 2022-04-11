@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+{% block content%}
+<div class="header-bar">
+<a href="{% url  'tasks' %}">&#8592;  Back</a>
+</div>
+<h1>Update task :</h1>
+<div class="form-update">
+<form method="POST" >
+    {%csrf_token%}
+    {{form.as_p}}
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <input type="submit" class="btn btn-primary" value="submit"></div>
+</form>
+</div>
+{% endblock %}

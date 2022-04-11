@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<div class="header-bar">
+<h2>Sign up</h2></div>
+<div class="form-update">
+  <form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+          <small >{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p >{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}
+    <div class="d-grid gap-2 col-6 mx-auto">
+    <button type="submit" class="btn btn-primary">Sign up</button></div>
+  </form>
+  <p>if you have already account <a href="{% url 'login'%}">Login</a></p>
+ </div>
+{% endblock  %}
