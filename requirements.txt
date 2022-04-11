@@ -38,7 +38,6 @@ pefile==2021.9.3
 Pillow==9.0.1
 pipenv==2022.1.8
 platformdirs==2.5.1
-psycopg2 @ file:///C:/ci_310/psycopg2_1642085998310/work
 PyAutoGUI==0.9.53
 pycparser==2.21
 pyee==8.2.2
